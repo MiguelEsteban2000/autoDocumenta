@@ -1,2 +1,5 @@
-# autoDocumenta
-Documentacion de auto
+#Documentacion
+
+## Diseño
+
+En la etapa de diseño primero entendimos el funcionamiento del sistema con todas sus partes, después de esto elegimos con que componentes íbamos a automatizar, llegando a la conclusión que para el control de los taques usaríamos sensores de proximidad capacitivos y un PLC para la programación en Ladder y su correcto funcionamiento, con esto en mente pasamos a diseñar la lógica del programa, como se muestra en el diagrama, la activación de las motobombas dependían del nivel del líquido, por ende, si el sensor de proximidad, puesto en la parte superior de los tanques, están desactivados significaba que el tanque no estaba lleno, por ende se activaban las motobombas, y llenado el tanque, desactivando las motobombas cuando el sensor se activaba, después se tenía que verificar el nivel de los dos tanques, si los dos están llenos se activaban las válvulas 1 y 2 para llenar el tanque de la mezcladora, y con un sensor en la mezcladora se mide si esta llena del todo, ósea que los dos tanques de los líquidos se vaciaron, para posteriormente cerrar las válvulas y empezar el proceso de mezclado por el tiempo indicado, después de que paso este tiempo indicado la válvula 3 se activa para llenar los respectivos envases de los detergentes, y con otro sensor en la parte final del tanque de la mezcladora se indica si toda la mezcla salió, por ende se procede a cerrar la válvula 3, y finalizado este proceso su suma uno al contador del proceso, y este se repite hasta que llegan a los litros indicados.
